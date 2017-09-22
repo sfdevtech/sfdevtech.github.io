@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="css/rs-plugin/settings.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/rs-plugin/layers.css">
+	<link rel="stylesheet" type="text/css" href="css/rs-plugin/navigation.css">
+
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+	<script type="text/javascript" src="js/rs-plugin/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="js/rs-plugin/jquery.themepunch.revolution.min.js"></script>
+	<!-- Document Title
+	============================================= -->
+	<title>Sfdev.tech</title>
+	
+	
+	<style>
+
+		.demos-filter {
+			margin: 0;
+			text-align: right;
+		}
+
+		.demos-filter li {
+			list-style: none;
+			margin: 10px 0px;
+		}
+
+		.demos-filter li a {
+			display: block;
+			border: 0;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #444;
+		}
+
+		.demos-filter li a:hover,
+		.demos-filter li.activeFilter a { color: #1ABC9C; }
+
+		@media (max-width: 991px) {
+			.demos-filter { text-align: center; }
+
+			.demos-filter li {
+				float: left;
+				width: 33.3%;
+				padding: 0 20px;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.demos-filter li { width: 50%; }
+		}
+
+		.tp-video-play-button { display: none !important; }
+
+		.tp-caption { white-space: nowrap; }
+
+	</style>
+
+
+</head>
+
+
+
+<body class="stretched side-panel-left side-push-panel">
+
+	<div class="body-overlay"></div>
+
+	<div id="side-panel" class="dark">
+
+		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon-line-cross"></i></a></div>
+
+		<div class="side-panel-wrap">
+
+			<div class="widget clearfix">
+
+				
+				
+
+			</div>
+
+			<div class="widget quick-contact-widget clearfix">
+
+				<h4 style="color:#0b0a0c">Quick Contact</h4>
+				<div id="quick-contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+				<form id="quick-contact-form" name="quick-contact-form" action="include/quickcontact.php" method="post" class="quick-contact-form nobottommargin">
+					<div class="form-process"></div>
+					<input type="text" class="required sm-form-control input-block-level" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Full Name" />
+					<input type="text" class="required sm-form-control email input-block-level" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Email Address" />
+					<textarea class="required sm-form-control input-block-level short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Message"></textarea>
+					<input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
+					<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d nomargin" value="submit">Send Email</button>
+				</form>
+
+				<script type="text/javascript">
+
+					jQuery("#quick-contact-form").validate({
+						submitHandler: function(form) {
+							jQuery(form).find('.form-process').fadeIn();
+							jQuery(form).ajaxSubmit({
+								target: '#quick-contact-form-result',
+								success: function() {
+									jQuery(form).find('.form-process').fadeOut();
+									jQuery(form).find('.sm-form-control').val('');
+									jQuery('#quick-contact-form-result').attr('data-notify-msg', jQuery('#quick-contact-form-result').html()).html('');
+									SEMICOLON.widget.notifications(jQuery('#quick-contact-form-result'));
+								}
+							});
+						}
+					});
+
+				</script>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" >
+			
+			
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.video.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.parallax.min.js"></script>
+
+			<div id="header-wrap">
+
+				<div class="container clearfix">
+
+
+					<!-- Logo
+					============================================= -->
+					<div id="logo">
+						<a href="#" class="standard-logo side-panel-trigger" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+						<a href="#" class="retina-logo side-panel-trigger" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+					</div><!-- #logo end -->
+			
+
+		</header><!-- #header end -->
+<div>
+		
+<nav class="menuk">
+  <input type="checkbox" href="#" class="menuk-open" name="menuk-open" id="menuk-open" />
+  <label class="menuk-open-button" for="menuk-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+  
+  <a href="community.html" class="menuk-item"> <i class="icon-line2-home" style="font-size:40px;color:#FFC800"></i></a>
+  <a href="services.html" class="menuk-item"> <i class="icon-line2-wrench" style="font-size:40px;color:#FFC800"></i> </a>
+ <a href="about.html" class="menuk-item"> <i class="icon-line2-info" style="font-size:40px;color:#f00"></i> </a>
+  
+
+
+ 
+  <a class="menuk-itemk"><img src="images/blackglass.png"></a>
+ 
+ 	
+	 
+
+</nav>
+
+
+<div  class="button_container " id="toggle" style="font-size:50px;">
+	<img src="images/icons/avatar.png" >
+  </div>
+
+
+<div class="overlay" id="overlay">
+	
+    <div class="cont">
+  <div class="demo">
+    <div class="login">
+      <div class="login__check"></div>
+      <div class="login__form">
+        <div class="login__row">
+          <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+            <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+          </svg>
+          <input type="text" class="login__input name" placeholder="Username" />
+        </div>
+        <div class="login__row">
+          <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+            <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+          </svg>
+          <input type="password" class="login__input pass" placeholder="Password" />
+        </div>
+        <button type="button" class="login__submit">Sign in</button>
+        <p class="login__signup">Don't have an account? &nbsp;<a>Sign up</a></p>
+      </div>
+    </div>
+    <div class="app">
+      <div class="app__top">
+        
+        
+      </div>
+      <div class="app__bot">
+        
+      
+      </div>
+      <div class="app__logout">
+        <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
+          <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+		<!-- Slider
+		============================================= -->
+
+		<section id="slider" class="revoslider-wrap  divcenter clearfix" style="max-width: 500px">
+
+			<div id="rev_slider_204_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="fullscreen-button44" style="margin:0px auto;background-color:#fff;padding:0px;margin-top:0px;margin-bottom:0px;">
+                <!-- START REVOLUTION SLIDER 5.1.1RC auto mode -->
+                <div id="rev_slider_204_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.1.1RC">
+                    <ul>
+                        <!-- SLIDE  -->
+                        <li data-index="rs-680" data-transition="zoomout" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="images/.jpg" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="one" data-description="">
+                             <!-- MAIN IMAGE -->
+                            <img src="images/full_1.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-offsetstart="-500 0" data-offsetend="500 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-680-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-170','-140','-110','-90']" data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;" data-mask_out="x:inherit;y:inherit;" data-start="1000" data-splitin="chars" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 5; white-space: nowrap;">San Francisco
+                            </div>
+                        </li>
+                        <!-- SLIDE  -->
+                        <li data-index="rs-681" data-transition="fadetotopfadefrombottom" data-slotamount="default" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500" data-thumb="images/.jpg" data-rotate="0" data-saveperformance="off" data-title="two" data-description="">
+                             <!-- MAIN IMAGE -->
+                            <img src="images/full_2.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-offsetstart="-500 0" data-offsetend="500 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-3" id="slide-681-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="chars" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 5; white-space: nowrap;">San Jose
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-8" id="slide-681-layer-10" data-x="['left','left','left','left']" data-hoffset="['680','680','680','680']" data-y="['top','top','top','top']" data-voffset="['632','632','632','632']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1000;s:1000;" data-start="2000" data-responsive_offset="on" style="z-index: 6;">
+                                <div class="rs-looped rs-pendulum" data-easing="linearEaseNone" data-startdeg="-20" data-enddeg="360" data-speed="35" data-origin="50% 50%"><img src="images/blurflake4.png" alt="" width="240" height="240" data-ww="['240px','240px','240px','240px']" data-hh="['240px','240px','240px','240px']" data-no-retina>
+                                </div>
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-7" id="slide-681-layer-11" data-x="['left','left','left','left']" data-hoffset="['948','948','948','948']" data-y="['top','top','top','top']" data-voffset="['487','487','487','487']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1000;s:1000;" data-start="2000" data-responsive_offset="on" style="z-index: 7;">
+                                <div class="rs-looped rs-wave" data-speed="20" data-angle="0" data-radius="50px" data-origin="50% 50%"><img src="images/blurflake3.png" alt="" width="170" height="170" data-ww="['170px','170px','170px','170px']" data-hh="['170px','170px','170px','170px']" data-no-retina>
+                                </div>
+                            </div>
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-4" id="slide-681-layer-12" data-x="['left','left','left','left']" data-hoffset="['719','719','719','719']" data-y="['top','top','top','top']" data-voffset="['200','200','200','200']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1000;s:1000;" data-start="2000" data-responsive_offset="on" style="z-index: 8;">
+                                <div class="rs-looped rs-rotate" data-easing="Power2.easeInOut" data-startdeg="-20" data-enddeg="360" data-speed="20" data-origin="50% 50%"><img src="blurflake2.png" alt="" width="50" height="51" data-ww="['50px','50px','50px','50px']" data-hh="['51px','51px','51px','51px']" data-no-retina>
+                                </div>
+                            </div>
+
+                            <!-- LAYER NR. 5 -->
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-6" id="slide-681-layer-13" data-x="['left','left','left','left']" data-hoffset="['187','187','187','187']" data-y="['top','top','top','top']" data-voffset="['216','216','216','216']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1000;s:1000;" data-start="2000" data-responsive_offset="on" style="z-index: 9;">
+                                <div class="rs-looped rs-wave" data-speed="4" data-angle="0" data-radius="10" data-origin="50% 50%"><img src="images/blurflake1.png" alt="" width="120" height="120" data-ww="['120px','120px','120px','120px']" data-hh="['120px','120px','120px','120px']" data-no-retina>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- SLIDE  -->
+                        <li data-index="rs-682" data-transition="zoomin" data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="images/.jpg" data-rotate="0" data-saveperformance="off" data-title="three" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/full_3.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-offsetstart="-500 0" data-offsetend="500 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-682-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rZ:35deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="chars" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 5; white-space: nowrap;">Oakland
+                            </div>
+                        </li>
+                        
+                        <!-- SLIDE  -->
+                        <li data-index="rs-684" data-transition="zoomin" data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="images/.jpg" data-rotate="0" data-saveperformance="off" data-title="four" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/full_4.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500" data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-684-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="x:[-105%];z:0;rX:0deg;rY:0deg;rZ:-90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="chars" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.1" style="z-index: 5; white-space: nowrap;">Berkeley
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tp-static-layers">
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption FullScreen-Toggle   tp-static-layer" id="slide-101-layer-1" data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power3.easeOut;" data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(0, 0, 0, 1.00);cursor:pointer;" data-transform_in="opacity:0;s:300;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1;s:1;" data-start="500" data-splitin="none" data-splitout="none" data-actions='[{"event":"click","action":"gofullscreen","delay":""},{"event":"click","action":"stoplayer","layer":"slide-101-layer-1","delay":""},{"event":"click","action":"startlayer","layer":"slide-101-layer-2","delay":""}]' data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-startslide="0" data-endslide="4" data-end="bytrigger" data-lasttriggerstate="keep" style="z-index: 5; white-space: nowrap;"><i class="icon-fullscreen"></i>
+                        </div>
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption FullScreen-Toggle   tp-static-layer" id="slide-101-layer-2" data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power3.easeOut;" data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(0, 0, 0, 1.00);cursor:pointer;" data-transform_in="opacity:0;s:300;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1;s:1;" data-start="bytrigger" data-splitin="none" data-splitout="none" data-actions='[{"event":"click","action":"exitfullscreen","delay":""},{"event":"click","action":"stoplayer","layer":"slide-101-layer-2","delay":""},{"event":"click","action":"startlayer","layer":"slide-101-layer-1","delay":""}]' data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-startslide="0" data-endslide="4" data-end="bytrigger" data-lasttriggerstate="reset" style="z-index: 6; white-space: nowrap;padding:11px 9px 11px 13px;"><i class="icon-remove"></i>
+                        </div>
+                    </div>
+                    <div class="tp-bannertimer" style="height: 7px; background-color: rgba(255, 255, 255, 0.25);"></div>
+                </div>
+            </div>
+            <!-- END REVOLUTION SLIDER -->
+            <script type="text/javascript">
+                var tpj = jQuery;
+
+                var revapi204;
+                tpj(document).ready(function() {
+                    if (tpj("#rev_slider_204_1").revolution == undefined) {
+                        revslider_showDoubleJqueryError("#rev_slider_204_1");
+                    } else {
+                        revapi204 = tpj("#rev_slider_204_1").show().revolution({
+                            sliderType: "standard",
+                            jsFileLocation: "js/rs-plugin/",
+                            sliderLayout: "auto",
+                            dottedOverlay: "none",
+                            delay: 9000,
+                            navigation: {
+                                keyboardNavigation: "off",
+                                keyboard_direction: "horizontal",
+                                mouseScrollNavigation: "off",
+                                onHoverStop: "off",
+                                touch: {
+                                    touchenabled: "on",
+                                    swipe_threshold: 75,
+                                    swipe_min_touches: 1,
+                                    swipe_direction: "horizontal",
+                                    drag_block_vertical: false
+                                },
+                                arrows: {
+                                    style: "gyges",
+                                    enable: true,
+                                    hide_onmobile: false,
+                                    hide_onleave: true,
+                                    hide_delay: 200,
+                                    hide_delay_mobile: 1200,
+                                    tmp: '',
+                                    left: {
+                                        h_align: "left",
+                                        v_align: "center",
+                                        h_offset: 0,
+                                        v_offset: 0
+                                    },
+                                    right: {
+                                        h_align: "right",
+                                        v_align: "center",
+                                        h_offset: 0,
+                                        v_offset: 0
+                                    }
+                                },
+                                thumbnails: {
+                                    style: "erinyen",
+                                    enable: true,
+                                    width: 150,
+                                    height: 100,
+                                    min_width: 150,
+                                    wrapper_padding: 5,
+                                    wrapper_color: "transparent",
+                                    wrapper_opacity: "1",
+                                    tmp: '<span class="tp-thumb-over"></span><span class="tp-thumb-image"></span><span class="tp-thumb-title">{{title}}</span><span class="tp-thumb-more"></span>',
+                                    visibleAmount: 5,
+                                    hide_onmobile: true,
+                                    hide_under: 800,
+                                    hide_onleave: false,
+                                    direction: "horizontal",
+                                    span: false,
+                                    position: "inner",
+                                    space: 0,
+                                    h_align: "center",
+                                    v_align: "bottom",
+                                    h_offset: 0,
+                                    v_offset: 20
+                                }
+                            },
+                            viewPort: {
+                                enable: true,
+                                outof: "pause",
+                                visible_area: "80%"
+                            },
+                            responsiveLevels: [1240, 1024, 778, 480],
+                            visibilityLevels: [1240, 1024, 778, 480],
+                            gridwidth: [1240, 1024, 778, 480],
+                            gridheight: [800, 700, 600, 500],
+                            lazyType: "none",
+                            shadow: 0,
+                            spinner: "off",
+                            stopLoop: "off",
+                            stopAfterLoops: -1,
+                            stopAtSlide: -1,
+                            shuffle: "off",
+                            autoHeight: "off",
+                            hideThumbsOnMobile: "on",
+                            hideSliderAtLimit: 0,
+                            hideCaptionAtLimit: 0,
+                            hideAllCaptionAtLilmit: 0,
+                            debugMode: false,
+                            fallbacks: {
+                                simplifyAll: "off",
+                                nextSlideOnWindowFocus: "off",
+                                disableFocusListener: false,
+                            }
+                        });
+                    }
+                }); /*ready*/
+            </script>
+
+		</section><!-- #content end -->
+
+		
+			
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap" id="sfdev">
+
+				<div class="container clearfix">
+
+					<p><span class="dropcap">W</span>hy do we take so much pride in being from the SF bay area? Policy dialogue peaceful The Elders rural global support. Process inclusive innovate readiness, public sector complexity. Lifting people up cornerstone partner, technology working families civic engagement activist recognize potential global network. Countries tackling solution respond change-makers tackle. Assistance, giving; fight against malnutrition experience in the field lasting change scalable. Empowerment long-term, fairness policy community progress social responsibility; Cesar Chavez recognition. Expanding community ownership visionary indicator pursue these aspirations accessibility. Achieve; worldwide, life-saving initiative facilitate. New approaches, John Lennon humanitarian relief fundraise vaccine Jane Jacobs community health workers Oxfam. Our ambitions informal economies.</p>
+
+					<blockquote class="topmargin bottommargin">
+						<p>Human rights healthcare immunize; advancement grantees. Medical supplies; meaningful, truth technology catalytic effect. Promising development capacity building international enable poverty.</p>
+					</blockquote>
+
+					<div class="col_half nobottommargin">
+
+						<p>Provide, Aga Khan, interconnectivity governance fairness replicable, new approaches visionary implementation. End hunger evolution, future promising development youth. Public sector, small-scale farmers; harness facilitate gender. Contribution dedicated global change movements, prosperity accelerate progress citizens of change. Elevate; accelerate reduce child mortality; billionaire philanthropy fluctuation, plumpy'nut care opportunity catalyze. Partner deep.</p>
+
+					</div>
+
+					<div class="col_half nobottommargin col_last">
+
+						<p>Frontline harness criteria governance freedom contribution. Campaign Angelina Jolie natural resources, Rockefeller peaceful philanthropy human potential. Justice; outcomes reduce carbon emissions nonviolent resistance human being. Solve innovate aid communities; benefit truth rural development UNICEF meaningful work. Generosity Action Against Hunger relief; many voices impact crisis situation poverty pride. Vaccine carbon.</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container clearfix" style="color:#0b0a0c">
+
+					<div class="col_half">
+						Copyrights &copy; 2016 All Rights Reserved by sfdev.tech<br>
+						
+					</div>
+
+					<div class="col_half col_last tright">
+						<div class="fright clearfix">
+							
+
+							
+						
+						</div>
+
+						<div class="clear"></div>
+
+						
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+
+</body>
+</html>

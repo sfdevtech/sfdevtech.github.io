@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Art Collectives</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content='' name='description' />
+    <meta content='' name='author' />
+<meta content="#000" name="theme-color"><!-- Windows Phone -->
+	<meta content="#000" name="msapplication-navbutton-color"><!-- iOS Safari -->
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/bootstrap.iframe.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
+
+
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	
+<link rel="stylesheet" href="../../instagram/assets/css/main.css" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+
+
+
+
+
+
+
+
+    
+    <div >
+      <div >
+         
+          
+              <input class='form-control' id='search_address'  style="visibility: hidden"/>
+             
+        
+          &nbsp;&nbsp;&nbsp;&nbsp;
+         
+      </div>
+
+      <noscript>
+        <div class='alert alert-info'>
+          <h4>Your JavaScript is disabled</h4>
+          <p>Please enable JavaScript to view the map.</p>
+        </div>
+      </noscript>
+
+
+      <div id='map_canvas' style="width:100%;height:100%;position:absolute;"></div>
+      <div class='alert alert-info' id='result_box' ><strong id='result_count'></strong></div>
+      <p class='pull-right'>
+       
+      </p>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.address.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyAR5eeFETe-sMigouZtPABzHpyA02MGyjQ"></script>
+    <script type="text/javascript" src="js/maps_lib.js"></script>
+    <script type='text/javascript'>
+      //<![CDATA[        
+        $(function() {
+          
+         var myMap = new MapsLib({
+            fusionTableId:      "1JYPdtpT-EtS2AEM-CQzEmP4j9ciEk1WLsypGNZsf",
+            googleApiKey:       "AIzaSyBKD2UIlblYVc_lYcfKWwwbR1Qv4gjGWzI",
+            locationColumn:     "geometry",
+            map_center:         [41.8781136, -87.66677856445312],
+            locationScope:      "chicago"
+          });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
+
+          $(':checkbox').click(function(){
+            myMap.doSearch();
+          });
+
+          $(':radio').click(function(){
+            myMap.doSearch();
+          });
+          
+          $('#search_radius').change(function(){
+            myMap.doSearch();
+          });
+          
+          $('#search').click(function(){
+            myMap.doSearch();
+          });
+          
+          $('#find_me').click(function(){
+            myMap.findMe(); 
+            return false;
+          });
+          
+          $('#reset').click(function(){
+            myMap.reset(); 
+            return false;
+          });
+          
+          $(":text").keydown(function(e){
+              var key =  e.keyCode ? e.keyCode : e.which;
+              if(key === 13) {
+                  $('#search').click();
+                  return false;
+              }
+          });
+        });
+      //]]>
+    </script>
+  </body>
+</html>

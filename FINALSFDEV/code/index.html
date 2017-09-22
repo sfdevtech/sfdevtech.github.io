@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+    <link rel="stylesheet" href="../../instagram/assets/css/main.css" />
+    <!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+
+ <link rel="stylesheet" type="text/css" href="css/rs-plugin/settings.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/rs-plugin/layers.css">
+    <link rel="stylesheet" type="text/css" href="css/rs-plugin/navigation.css">
+
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+	
+
+    <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+    <script type="text/javascript" src="js/rs-plugin/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="js/rs-plugin/jquery.themepunch.revolution.min.js"></script>
+
+</head>
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Sfdev.tech</title>
+
+
+
+
+
+<style>
+
+
+
+	.navdowna{
+	   text-align:center;left:0
+	   
+	}
+
+	.carousel__nav{
+	   position:absolute;bottom:15%;width:100%;z-index:3
+	   
+	   }
+	   
+	#top-menua,.navdowna{
+	   position:fixed;top:2.3em;z-index:9999999
+	   
+	   }
+	.carousel__nav>label{
+	   border:1px solid #fff;display:inline-block;border-radius:50%;cursor:pointer;margin:0 .125%;width:20px;height:20px
+	   }
+	   
+	#top-menua,#top-menua li,#top-menua li.active1 a,i{
+	   margin:0;list-style-type:none;outline:0
+	   }
+
+	#top-menua{
+	   
+	width:100%;
+	background:linear-gradient(#3D4246,#24282B);
+	height:60px;
+	box-shadow:  0px 0px 30px 0px skyblue;
+	border:0;
+	padding:0
+
+
+
+
+	}
+
+
+	#top-menua li{
+	   float:left;
+	   width:33.3%;
+	   height:100%;
+	   color:#D9D9D9;
+	   text-shadow:2px 3px #0F1014;
+	   background:linear-gradient(#44494F,#2F3237);
+	   border-radius:3px;
+	   box-shadow:1px 1px #17191C;
+	   cursor:pointer;
+	   border:0;
+	   padding:3px 0 0
+	   }
+	   
+	   #top-menua li.active1 a{
+	       color:#171820;
+	       background:#2A2D31;
+	       box-shadow:inset 0 8px 8px 8px rgba(15,16,20,.5);
+	       border:5px solid #0F1014;
+	       border:0;
+	       padding:10px;
+	       border-radius:3px
+	       }
+	       
+	       i{
+	           font-size:20px;
+	           color:#0F1014;
+	           text-shadow:0 1px #666;
+	           border:0;
+	           padding:10px 0 0}
+	#top-menua a{
+	   text-decoration:none
+	   }
+
+	.active1 i{
+	   color:#d3d3d3
+	   }
+	   
+	.navdowna{
+	   background:#111;
+	   color:#fff;
+	   padding-top:20px;
+	   padding-bottom:20px;
+	   right:0;
+	   -webkit-transition:-webkit-transform 1s cubic-bezier(.86,0,.07,1);
+	   -moz-transition:-moz-transform 1s cubic-bezier(.86,0,.07,1);
+	   transition:transform 1s cubic-bezier(.86,0,.07,1)
+	   }
+
+
+	#top-menua a{
+	   text-decoration:none;
+	 padding:10px;
+	   }
+
+	.active i{
+	   color:#d3d3d3
+	   }
+
+	.navdowna{
+	   background:#111;
+	   color:#fff;
+	   padding-top:30px;
+	   padding-bottom:30px;
+	   right:0;
+	   -webkit-transition:-webkit-transform 1s cubic-bezier(.86,0,.07,1);
+	   -moz-transition:-moz-transform 1s cubic-bezier(.86,0,.07,1);
+	   transition:transform 1s cubic-bezier(.86,0,.07,1);
+	   z-index:9999999
+	   }
+
+	.navdowna.hidden{
+	   -webkit-transform:translateY(100%);
+	   -moz-transform:translateY(100%);
+	   -ms-transform:translateY(100%);
+	   -o-transform:translateY(100%);
+	   transform:translateY(100%);
+	   z-index:9999999
+	   }
+
+
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+<!--navbar-->
+		<div class="navdowna">
+			<ul id="top-menua" style="margin:0 0 0 0"> 
+				
+				<li class="active1"> 
+					<a href="index.html">
+						<i class="lnr lnr-user"><small style="font-size: 69%"> PRODUCTS</small></i>
+					</a> 
+				</li>
+				
+				<li>
+					<a href="insta_test.html">
+						<i class="lnr lnr-pencil "><small style="font-size: 69%"> DESIGN</small></i>
+					</a>
+				</li> 
+						  
+				<li> 
+					<a href="insta1.html">
+						<i class="lnr lnr-diamond"><small style="font-size: 69%"> DEVELOP</small></i>
+					</a> 
+				</li>
+					
+				
+				
+				
+			</ul>
+		</div>
+
+
+
+
+
+
+    <!-- Document Wrapper
+    ============================================= -->
+    <div  >
+
+        <!-- Header
+        ============================================= -->
+        <header >
+            
+            <script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.video.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.parallax.min.js"></script>
+
+               
+
+                    
+                   
+
+
+        </header><!-- #header end -->
+
+
+
+
+
+
+
+
+
+
+
+        <section id="slider" class="revoslider-wrap full-screen clearfix ">
+
+            <div id="rev_slider_206_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="creative-freedom" style="background-color:#1f1d24;padding:0px;">
+                <!-- START REVOLUTION SLIDER 5.1.1RC fullscreen mode -->
+                <div id="rev_slider_206_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.1.1RC">
+                    <ul>
+                        <!-- SLIDE  -->
+                        <li data-index="rs-688" data-transition="fadethroughdark" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="2000"  data-rotate="0" data-saveperformance="off" data-title="Creative" data-param1="01" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/part1.gif" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+
+                           
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption tp-shape tp-shapewrapper  rs-parallaxlevel-tobggroup" id="slide-688-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontweight="['100','100','400','400']" data-width="full" data-height="full" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1500;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1500;e:Power2.easeInOut;s:1500;e:Power2.easeInOut;" data-start="150" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 5;background-color:rgba(18, 12, 20, 0.75);border-color:rgba(0, 0, 0, 0);">
+                            </div>
+
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption Creative-SubTitle   tp-resizeme rs-parallaxlevel-2" id="slide-688-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontsize="['14','14','14','12']" data-lineheight="['14','14','14','12']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:1500;e:Power3.easeOut;" data-transform_out="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2350" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap;text-align:center;">2016, smartphone use is projected to surpase 
+                            </div>
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption Creative-Title   tp-resizeme rs-parallaxlevel-1" id="slide-688-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['100','100','100','50']" data-fontsize="['70','70','50','40']" data-lineheight="['70','70','55','45']" data-width="['none','none','none','320']" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:1500;e:Power3.easeOut;" data-transform_out="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2550" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 8; white-space: nowrap;text-align:center;">Two Billion
+                                <br/>2,000,000,000
+                            </div>
+
+                           
+
+                            <!-- LAYER NR. 6 -->
+                            <div class="tp-caption   rs-parallaxlevel-15" id="slide-688-layer-6" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['694','611','689','540']" data-fontweight="['400','500','500','500']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-style_hover="c:rgba(205, 176, 131, 1.00);bc:rgba(205, 176, 131, 1.00);cursor:pointer;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power2.easeOut;" data-transform_out="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;s:500;e:Power1.easeIn;s:500;e:Power1.easeIn;" data-start="3850" data-splitin="none" data-splitout="none" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]' data-responsive_offset="on" data-responsive="off" style="z-index: 9; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500; color:white;"><i class="icon-double-angle-right"></i>
+                            </div>
+                        </li>
+                        <!-- SLIDE  -->
+                        <li data-index="rs-689" data-transition="fadethroughdark" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="2000" data-thumb="include/rs-plugin/demos/assets/images/creative_bg1-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Quality" data-param1="02" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/part2.gif" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption tp-shape tp-shapewrapper  rs-parallaxlevel-tobggroup" id="slide-689-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1500;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1500;e:Power2.easeInOut;s:1500;e:Power2.easeInOut;" data-start="150" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 5;background-color:rgba(18, 12, 20, 0.75);border-color:rgba(0, 0, 0, 0);">
+                            </div>
+
+                           
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption Creative-SubTitle   tp-resizeme rs-parallaxlevel-2" id="slide-689-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','50']" data-fontsize="['14','14','14','12']" data-lineheight="['14','14','14','12']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:1500;e:Power3.easeOut;" data-transform_out="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2350" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap;text-align:center;">Clarke's third law..
+                            </div>
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption Creative-Title   tp-resizeme rs-parallaxlevel-1" id="slide-689-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['100','100','100','100']" data-fontsize="['70','70','50','40']" data-lineheight="['70','70','55','45']" data-width="['none','none','none','320']" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:1500;e:Power3.easeOut;" data-transform_out="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2550" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 8; white-space: nowrap;text-align:center;">
+                                <br/> Is it Magic?
+                            </div>
+
+                           
+
+                            <!-- LAYER NR. 6 -->
+                            <div class="tp-caption   rs-parallaxlevel-15" id="slide-689-layer-6" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['694','611','689','540']" data-fontweight="['400','500','500','500']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-style_hover="c:rgba(205, 176, 131, 1.00);bc:rgba(205, 176, 131, 1.00);cursor:pointer;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power2.easeOut;" data-transform_out="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;s:500;e:Power1.easeIn;s:500;e:Power1.easeIn;" data-start="3850" data-splitin="none" data-splitout="none" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]' data-responsive_offset="on" data-responsive="off" style="z-index: 9; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500; color:white;"><i class="icon-double-angle-right"></i>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        </li>
+                        <!-- SLIDE  -->
+                        <li data-index="rs-690" data-transition="fadethroughdark" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="2000" data-thumb="include/rs-plugin/demos/assets/images/icebg-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Concept" data-param1="03" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/part3.gif" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption tp-shape tp-shapewrapper  rs-parallaxlevel-tobggroup" id="slide-690-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1500;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1500;e:Power2.easeInOut;s:1500;e:Power2.easeInOut;" data-start="150" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 5;background-color:rgba(18, 12, 20, 0.75);border-color:rgba(0, 0, 0, 0);">
+                            </div>
+
+                           
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption Creative-SubTitle   tp-resizeme rs-parallaxlevel-2" id="slide-690-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-91','-91','-81','-64']" data-fontsize="['14','14','14','12']" data-lineheight="['14','14','14','12']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:1500;e:Power3.easeOut;" data-transform_out="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2350" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap;text-align:center;">San Francisco | Development | Technology
+                            </div>
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption Creative-Title   tp-resizeme rs-parallaxlevel-1" id="slide-690-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-10','-10','-10','-10']" data-fontsize="['70','70','50','40']" data-lineheight="['70','70','55','45']" data-width="['none','none','none','320']" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:1500;e:Power3.easeOut;" data-transform_out="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2550" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 8; white-space: nowrap;text-align:center;">SFDEV.<span style="color:red">TECH</span>
+                               
+                            </div>
+
+                           
+                            <!-- LAYER NR. 6 -->
+                            <div class="tp-caption   rs-parallaxlevel-15" id="slide-690-layer-6" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['694','611','689','540']" data-fontweight="['400','500','500','500']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-style_hover="c:rgba(205, 176, 131, 1.00);bc:rgba(205, 176, 131, 1.00);cursor:pointer;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power2.easeOut;" data-transform_out="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;s:500;e:Power1.easeIn;s:500;e:Power1.easeIn;" data-start="3850" data-splitin="none" data-splitout="none"  data-responsive_offset="on" data-responsive="off" style="z-index: 9; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500; color:white;"><a href="services.html"><i class="icon-double-angle-up "></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                </div>
+            </div>
+            <!-- END REVOLUTION SLIDER -->
+            <script type="text/javascript">
+                var tpj = jQuery;
+
+                var revapi206;
+                tpj(document).ready(function() {
+                    if (tpj("#rev_slider_206_1").revolution == undefined) {
+                        revslider_showDoubleJqueryError("#rev_slider_206_1");
+                    } else {
+                        revapi206 = tpj("#rev_slider_206_1").show().revolution({
+                            sliderType: "standard",
+                            jsFileLocation: "include/rs-plugin/js/",
+                            sliderLayout: "fullscreen",
+                            dottedOverlay: "none",
+                            delay: 9000,
+                            navigation: {
+                                keyboardNavigation: "off",
+                                keyboard_direction: "horizontal",
+                                mouseScrollNavigation: "off",
+                                onHoverStop: "off",
+                                touch: {
+                                    touchenabled: "on",
+                                    swipe_threshold: 75,
+                                    swipe_min_touches: 50,
+                                    swipe_direction: "horizontal",
+                                    drag_block_vertical: false
+                                },
+                               
+                            },
+                            responsiveLevels: [1240, 1024, 778, 480],
+                            visibilityLevels: [1240, 1024, 778, 480],
+                            gridwidth: [1240, 1024, 778, 480],
+                            gridheight: [868, 768, 960, 720],
+                            lazyType: "none",
+                            parallax: {
+                                type: "3D",
+                                origo: "slidercenter",
+                                speed: 1000,
+                                levels: [2, 4, 6, 8, 10, 12, 14, 16, 45, 50, 47, 48, 49, 50, 0, 50],
+                                type: "3D",
+                                ddd_shadow: "off",
+                                ddd_bgfreeze: "on",
+                                ddd_overflow: "hidden",
+                                ddd_layer_overflow: "visible",
+                                ddd_z_correction: 100,
+                            },
+                            spinner: "off",
+                            stopLoop: "on",
+                            stopAfterLoops: 0,
+                            stopAtSlide: 1,
+                            shuffle: "off",
+                            autoHeight: "off",
+                            fullScreenAutoWidth: "off",
+                            fullScreenAlignForce: "off",
+                            fullScreenOffsetContainer: "",
+                            fullScreenOffset: "60px",
+                            disableProgressBar: "on",
+                            hideThumbsOnMobile: "off",
+                            hideSliderAtLimit: 0,
+                            hideCaptionAtLimit: 0,
+                            hideAllCaptionAtLilmit: 0,
+                            debugMode: false,
+                            fallbacks: {
+                                simplifyAll: "off",
+                                nextSlideOnWindowFocus: "off",
+                                disableFocusListener: false,
+                            }
+                        });
+                    }
+                }); /*ready*/
+            </script>
+
+            <!-- END REVOLUTION SLIDER -->
+
+        </section>
+
+       
+<footer>
+    
+    </footer>
+    <!-- Footer Scripts
+    ============================================= -->
+    <script type="text/javascript" src="js/functions.js"></script>
+
+</body>
+</html>

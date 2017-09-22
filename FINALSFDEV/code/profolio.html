@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700,800,900|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="css/rs-plugin/settings.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/rs-plugin/layers.css">
+	<link rel="stylesheet" type="text/css" href="css/rs-plugin/navigation.css">
+
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+	<script type="text/javascript" src="js/rs-plugin/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="js/rs-plugin/jquery.themepunch.revolution.min.js"></script>
+
+	<!-- Document Title
+	============================================= -->
+	<title>Sfdev.tech</title>
+
+	<style>
+
+		.demos-filter {
+			margin: 0;
+			text-align: right;
+		}
+
+		.demos-filter li {
+			list-style: none;
+			margin: 10px 0px;
+		}
+
+		.demos-filter li a {
+			display: block;
+			border: 0;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #444;
+		}
+
+		.demos-filter li a:hover,
+		.demos-filter li.activeFilter a { color: #1ABC9C; }
+
+		@media (max-width: 991px) {
+			.demos-filter { text-align: center; }
+
+			.demos-filter li {
+				float: left;
+				width: 33.3%;
+				padding: 0 20px;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.demos-filter li { width: 50%; }
+		}
+
+		.revo-slider-emphasis-text {
+			font-size: 64px;
+			font-weight: 700;
+			letter-spacing: -1px;
+			font-family: 'Raleway', sans-serif;
+			padding: 15px 20px;
+			border-top: 2px solid #FFF;
+			border-bottom: 2px solid #FFF;
+		}
+
+		.revo-slider-desc-text {
+			font-size: 20px;
+			font-family: 'Lato', sans-serif;
+			width: 650px;
+			text-align: center;
+			line-height: 1.5;
+		}
+
+		.revo-slider-caps-text {
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 3px;
+			font-family: 'Raleway', sans-serif;
+		}
+		.tp-video-play-button { display: none !important; }
+
+		.tp-caption { white-space: nowrap; }
+		
+
+
+
+
+	</style>
+
+</head>
+
+
+
+<body class="stretched side-panel-left side-push-panel">
+
+	<div class="body-overlay"></div>
+
+	<div id="side-panel" class="dark">
+
+		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon-line-cross"></i></a></div>
+
+		<div class="side-panel-wrap">
+
+			<div class="widget clearfix">
+
+				
+				
+
+			</div>
+
+			<div class="widget quick-contact-widget clearfix">
+
+				<h4>Quick Contact</h4>
+				<div id="quick-contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+				<form id="quick-contact-form" name="quick-contact-form" action="include/quickcontact.php" method="post" class="quick-contact-form nobottommargin">
+					<div class="form-process"></div>
+					<input type="text" class="required sm-form-control input-block-level" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Full Name" />
+					<input type="text" class="required sm-form-control email input-block-level" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Email Address" />
+					<textarea class="required sm-form-control input-block-level short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Message"></textarea>
+					<input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
+					<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d nomargin" value="submit">Send Email</button>
+				</form>
+
+				<script type="text/javascript">
+
+					jQuery("#quick-contact-form").validate({
+						submitHandler: function(form) {
+							jQuery(form).find('.form-process').fadeIn();
+							jQuery(form).ajaxSubmit({
+								target: '#quick-contact-form-result',
+								success: function() {
+									jQuery(form).find('.form-process').fadeOut();
+									jQuery(form).find('.sm-form-control').val('');
+									jQuery('#quick-contact-form-result').attr('data-notify-msg', jQuery('#quick-contact-form-result').html()).html('');
+									SEMICOLON.widget.notifications(jQuery('#quick-contact-form-result'));
+								}
+							});
+						}
+					});
+
+				</script>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+
+		<section id="slider" class="slider-parallax full-screen with-header force-full-screen clearfix">
+
+			<div class="full-screen force-full-screen" style="background: url('images/sf.gif');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+
+				<div class="container clearfix">
+					<div class="emphasis-title vertical-middle center">
+						<h1 data-animate="fadeInUp"><strong style="color:white"><span style="color:red">Tech</span>nology, shouldn't be difficult</strong></h1>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+
+
+
+
+	<!-- Header
+		============================================= -->
+		<header id="header" >
+			
+			
+			<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.video.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.parallax.min.js"></script>
+
+
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.carousel.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.actions.min.js"></script>
+
+
+			<div id="header-wrap">
+
+				<div class="container clearfix" >
+
+					<!-- Logo
+					============================================= -->
+					<div id="logo">
+						<a href="#" class="standard-logo side-panel-trigger" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+						<a href="#" class="retina-logo side-panel-trigger" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+					</div><!-- #logo end -->
+
+					
+		</header><!-- #header end -->
+
+
+        <div>
+		
+<nav class="menuk">
+  <input type="checkbox" href="#" class="menuk-open" name="menuk-open" id="menuk-open" />
+  <label class="menuk-open-button" for="menuk-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+
+<a href="services.html" class="menuk-item"> <i class="icon-line2-wrench" style="font-size:40px;color:#FFC800"></i></a>
+  <a href="community.html" class="menuk-item"> <i class="icon-group" style="font-size:40px;color:#FFC800"></i> </a>
+  <a href="profolio.html" class="menuk-item"> <i class="icon-line2-home" style="font-size:40px;color:#f00"></i> </a>
+  <a href="about.html" class="menuk-item"> <i class="icon-line2-info" style="font-size:40px;color:#FFC800"></i> </a>
+  <a href="contact.html" class="menuk-item"> <i class="icon-phone" style="font-size:40px;color:#FFC800"></i> </a>
+
+ 
+  <a class="menuk-itemk"><img src="images/blackglass.png"></a>
+ 
+ 	
+	 
+</nav>
+
+
+<div  class="button_container " id="toggle" style="font-size:50px;">
+	<img src="images/icons/avatar.png" >
+  </div>
+
+
+<div class="overlay" id="overlay">
+	
+    <div class="cont">
+  <div class="demo">
+    <div class="login">
+      <div class="login__check"></div>
+      <div class="login__form">
+        <div class="login__row">
+          <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+            <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+          </svg>
+          <input type="text" class="login__input name" placeholder="Username" />
+        </div>
+        <div class="login__row">
+          <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+            <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+          </svg>
+          <input type="password" class="login__input pass" placeholder="Password" />
+        </div>
+        <button type="button" class="login__submit">Sign in</button>
+        <p class="login__signup">Don't have an account? &nbsp;<a>Sign up</a></p>
+      </div>
+    </div>
+    <div class="app">
+      <div class="app__top">
+        
+        
+      </div>
+      <div class="app__bot">
+        
+      
+      </div>
+      <div class="app__logout">
+        <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
+          <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+     <section id="content">
+<div class=" parallax " style="background-image: url('images/notgeneric_bg5.jpg') ;background-repeat:no-repeat;background-size:cover;background-position:center center; padding: 100px 0;" >
+	
+
+				
+				<div class="container clearfix">
+					
+					<div class="heading-block center nobottommargin">
+						<h2 style="color:white; font-weight:800;">Damn we're good</h2>
+						
+				
+					
+					
+					
+					<div class="col_two_fifth topmargin nobottommargin" id="radarChart" style="opacity: 0;">
+						<canvas id="radarChartCanvas" width="430" height="300" ></canvas>
+					</div>
+
+					<div class="col_three_fifth topmargin col_last">
+
+						<div class="heading-block">
+							<h3 style="color:white; font-weight:400;">How is it possible to do what we do?</h3>
+							<span style="color:white; font-weight:100;">There is nothing more important than the team. We are experts in our field. There is nothing more important than the team. We are experts in our field. There is nothing more important than the team. We are experts in our field. </span>
+						</div>
+
+
+				</div>
+</div>
+					
+
+					
+
+					<script type="text/javascript">
+
+					jQuery(window).load( function(){
+
+						var radarChartData = {
+							labels : ["Designing","Marketing","Business","Programming","Management"],
+							datasets : [
+								{
+									fillColor : "rgba(0,0,0,0.5)",
+									strokeColor : "rgba(0,0,0,1)",
+									pointColor : "rgba(0,0,0,1)",
+									pointStrokeColor : "#fff",
+									data : [50,50,50,50,90]
+								},
+								{
+									fillColor : "rgba(151,187,205,0.5)",
+									strokeColor : "rgba(151,187,205,1)",
+									pointColor : "rgba(151,187,205,1)",
+									pointStrokeColor : "#fff",
+									data : [50,50,50,90,50]
+								},
+								{
+									fillColor : "rgba(120,120,120,0.5)",
+									strokeColor : "rgba(120,120,120,1)",
+									pointColor : "rgba(120,120,120,1)",
+									pointStrokeColor : "#fff",
+									data : [50,50,90,50,50]
+								},
+								{
+									fillColor : "rgba(170,170,170,0.5)",
+									strokeColor : "rgba(170,170,170,1)",
+									pointColor : "rgba(170,170,170,1)",
+									pointStrokeColor : "#fff",
+									data : [50,90,50,50,50]
+								},
+								{
+									fillColor : "rgba(50,50,50,0.5)",
+									strokeColor : "rgba(50,50,50,1)",
+									pointColor : "rgba(50,50,50,1)",
+									pointStrokeColor : "#fff",
+									data : [90,50,50,50,50]
+								},
+							]
+
+						};
+
+						
+
+						var globalGraphSettings = {animation : Modernizr.canvas};
+
+						function showRadarChart(){
+							var ctx = document.getElementById("radarChartCanvas").getContext("2d");
+							new Chart(ctx).Radar(radarChartData,globalGraphSettings);
+						}
+
+						function showDoughnutChart(){
+							var ctx = document.getElementById("doughnutChartCanvas").getContext("2d");
+							new Chart(ctx).Doughnut(doughnutChartData,globalGraphSettings);
+						}
+
+						$('#radarChart').appear( function(){ $(this).css({ opacity: 1 }); setTimeout(showRadarChart,300); },{accX: 0, accY: -155},'easeInCubic');
+
+						$('#doughnutChart').appear( function(){ $(this).css({ opacity: 1 }); setTimeout(showDoughnutChart,300); },{accX: 0, accY: -155},'easeInCubic');
+
+					});
+
+					</script>
+</div>
+
+
+					<div class="container clear-bottommargin clearfix">
+<img data-animate="fadeInLeftBig" src="images/phone1.png" alt="iPhone" class="center-block">
+						<div class="heading-block center">
+							<h2 style="color:white; font-weight:400;">SFDEV.TECH ASSURANCE</h2>
+							<span style="color:white; font-weight:100;">We promise to provide</span>
+						</div>
+
+						<div class="row">
+
+							
+
+							<div class="col-md-6 col-sm-6 topmargin bottommargin">
+
+								<div class="col_full">
+
+									<div class="feature-box fbox-plain fbox-small fbox-dark">
+										<div class="fbox-icon" >
+											<a href="#"><i class="icon-line-monitor" style="color:white"></i></a>
+										</div>
+										<h3 style="color:white">Perfect execution</h3>
+										<p style="color:white">There is nothing more important than the team. We are experts in our field.</p>
+									</div>
+
+								</div>
+
+								<div class="col_full">
+
+									<div class="feature-box fbox-plain fbox-small fbox-dark">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-line-eye" style="color:white"></i></a>
+										</div>
+										<h3 style="color:white">Talented workpool</h3>
+										<p style="color:white">There is nothing more important than the team. We are experts in our field.</p>
+									</div>
+
+								</div>
+
+								<div class="col_full nobottommargin">
+
+									<div class="feature-box fbox-plain fbox-small fbox-dark">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-line-power" style="color:white"></i></a>
+										</div>
+										<h3 style="color:white">Excellence filter</h3>
+										<p style="color:white">There is nothing more important than the team. We are experts in our field.</p>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-6 col-sm-6 topmargin bottommargin">
+
+								<div class="col_full">
+
+									<div class="feature-box fbox-plain fbox-small fbox-dark">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-line-layers" style="color:white"></i></a>
+										</div>
+										<h3 style="color:white">satisfaction guaranteed </h3>
+										<p style="color:white">There is nothing more important than the team. We are experts in our field.</p>
+									</div>
+
+								</div>
+
+								<div class="col_full">
+
+									<div class="feature-box fbox-plain fbox-small fbox-dark">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-line-star" style="color:white"></i></a>
+										</div>
+										<h3 style="color:white">Breakthrough Speed</h3>
+										<p style="color:white">There is nothing more important than the team. We are experts in our field.</p>
+									</div>
+
+								</div>
+
+								<div class="col_full nobottommargin">
+
+									<div class="feature-box fbox-plain fbox-small fbox-dark">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-line-anchor" style="color:white"></i></a>
+										</div>
+										<h3 style="color:white">Unquestionable support</h3>
+										<p style="color:white">There is nothing more important than the team. We are experts in our field.</p>
+									</div>
+
+								</div>
+
+							</div>
+							</div>
+
+	
+			</div>
+
+		</section><!-- #content end -->
+		
+	
+
+		<section id="slider" class="revoslider-wrap clearfix">
+
+			
+				<!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
+					<div id="rev_slider_54_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="showcase-carousel" style="margin:0px auto;background-color:#111111;padding:0px;margin-top:0px;margin-bottom:0px;background-image:url(images/pattern2.png);background-repeat:no-repeat;background-size:cover;background-position:center center;">
+				<!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
+					<div id="rev_slider_54_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+						<ul>	<!-- SLIDE  -->
+							<li data-index="rs-204" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Number One" data-description="">
+								
+								
+								<!-- MAIN IMAGE -->
+								<img src="images/phone1.png" alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+								
+                         
+                            
+                             
+                            
+                            
+							</li>
+							<!-- SLIDE  -->
+							<li data-index="rs-205" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Number Two" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/phone2.png"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+							</li>
+							<!-- SLIDE  -->
+							<li data-index="rs-206" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Number Three" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/phone3.png"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+							</li>
+							<!-- SLIDE  -->
+							<li data-index="rs-207" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Number Four" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/phone4.png"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+							</li>
+							<!-- SLIDE  -->
+							<li data-index="rs-208" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Number Five" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/phone5.png"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+							</li>
+							<!-- SLIDE  -->
+							<li data-index="rs-209" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Number Six" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/phone6.png"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+							</li>
+							<!-- SLIDE  -->
+							<li data-index="rs-210" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Number Seven" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/phone7.png"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+							</li>
+							<!-- SLIDE  -->
+							<li data-index="rs-211" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Number Eight" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/phone8.png"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+							</li>
+							<!-- SLIDE  -->
+							<li data-index="rs-212" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Number Nine" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/phone9.png"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+							</li>
+						</ul>
+						
+					</div>
+				</div><!-- END REVOLUTION SLIDER -->
+				<script type="text/javascript">
+					var tpj=jQuery;
+					var revapi54;
+					tpj(document).ready(function() {
+						if(tpj("#rev_slider_54_1").revolution == undefined){
+							revslider_showDoubleJqueryError("#rev_slider_54_1");
+						}else{
+							revapi54 = tpj("#rev_slider_54_1").show().revolution({
+								sliderType:"carousel",
+								jsFileLocation:"js/rs-plugin/",
+								sliderLayout:"fullwidth",
+								dottedOverlay:"none",
+								delay:9000,
+								navigation: {
+									keyboardNavigation:"off",
+									keyboard_direction: "horizontal",
+									mouseScrollNavigation:"off",
+									onHoverStop:"off",
+									arrows: {
+										style:"erinyen",
+										enable:true,
+										hide_onmobile:false,
+										hide_onleave:false,
+										tmp:'<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div>    <div class="tp-arr-img-over"></div>	<span class="tp-arr-titleholder">{{title}}</span> </div>',
+										left: {
+											h_align:"left",
+											v_align:"center",
+											h_offset:30,
+											v_offset:0
+										},
+										right: {
+											h_align:"right",
+											v_align:"center",
+											h_offset:30,
+											v_offset:0
+										}
+									}
+									,
+									
+								},
+								carousel: {
+									maxRotation: 65,
+									vary_rotation: "on",
+									minScale: 55,
+									vary_scale: "off",
+									horizontal_align: "center",
+									vertical_align: "center",
+									fadeout: "on",
+									vary_fade: "on",
+									maxVisibleItems: 5,
+									infinity: "off",
+									space: -150,
+									stretch: "off"
+								},
+								gridwidth:600,
+								gridheight:600,
+								lazyType:"none",
+								shadow:0,
+								spinner:"off",
+								stopLoop:"on",
+								stopAfterLoops:0,
+								stopAtSlide:1,
+								shuffle:"off",
+								autoHeight:"off",
+								disableProgressBar:"on",
+								hideThumbsOnMobile:"off",
+								hideSliderAtLimit:0,
+								hideCaptionAtLimit:0,
+								hideAllCaptionAtLilmit:0,
+								debugMode:false,
+								fallbacks: {
+									simplifyAll:"off",
+									nextSlideOnWindowFocus:"off",
+									disableFocusListener:false,
+								}
+							});
+						}
+					});	/*ready*/
+				</script>
+
+		</section>
+		
+		
+		
+		
+		
+		<section id="content">
+<div class=" parallax " style="background-image: url('images/notgeneric_bg5.jpg') ;background-repeat:no-repeat;background-size:cover;background-position:center center; padding: 100px 0;" >
+				
+				
+				<div class="container clearfix">
+
+					<!-- Portfolio Items
+						
+					============================================= -->
+					<div id="portfolio" class="portfolio-3 clearfix" >
+
+						<article class="portfolio-item pf-media pf-icons">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/74H.jpg" alt="Open Imagination">
+								</a>
+								<div class="portfolio-overlay">
+									<a href="images/74H.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
+									<a href="portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+								</div>
+							</div>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">Open Imagination</a></h3>
+								<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+							</div>
+						</article>
+
+					
+						<article class="portfolio-item pf-media pf-icons">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/74H.jpg" alt="Open Imagination">
+								</a>
+								<div class="portfolio-overlay">
+									<a href="images/74H.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
+									<a href="portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+								</div>
+							</div>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">Open Imagination</a></h3>
+								<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+							</div>
+						</article>
+
+						<article class="portfolio-item pf-media pf-icons">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/74H.jpg" alt="Open Imagination">
+								</a>
+								<div class="portfolio-overlay">
+									<a href="images/74H.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
+									<a href="portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+								</div>
+							</div>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">Open Imagination</a></h3>
+								<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+							</div>
+						</article>
+
+
+						<article class="portfolio-item pf-media pf-icons">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/74H.jpg" alt="Open Imagination">
+								</a>
+								<div class="portfolio-overlay">
+									<a href="images/74H.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
+									<a href="portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+								</div>
+							</div>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">Open Imagination</a></h3>
+								<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+							</div>
+						</article>
+
+						<article class="portfolio-item pf-media pf-icons">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/74H.jpg" alt="Open Imagination">
+								</a>
+								<div class="portfolio-overlay">
+									<a href="images/74H.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
+									<a href="portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+								</div>
+							</div>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">Open Imagination</a></h3>
+								<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+							</div>
+						</article>
+
+						<article class="portfolio-item pf-media pf-icons">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/74H.jpg" alt="Open Imagination">
+								</a>
+								<div class="portfolio-overlay">
+									<a href="images/74H.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
+									<a href="portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+								</div>
+							</div>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">Open Imagination</a></h3>
+								<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+							</div>
+						</article>
+
+					</div><!-- #portfolio end -->
+
+					<!-- Portfolio Script
+					============================================= -->
+					<script type="text/javascript">
+
+						jQuery(window).load(function(){
+
+							var $container = $('#portfolio');
+
+							$container.isotope({ transitionDuration: '0.65s' });
+
+							$('#portfolio-filter a').click(function(){
+								$('#portfolio-filter li').removeClass('activeFilter');
+								$(this).parent('li').addClass('activeFilter');
+								var selector = $(this).attr('data-filter');
+								$container.isotope({ filter: selector });
+								return false;
+							});
+
+							$('#portfolio-shuffle').click(function(){
+								$container.isotope('updateSortData').isotope({
+									sortBy: 'random'
+								});
+							});
+
+							$(window).resize(function() {
+								$container.isotope('layout');
+							});
+
+						});
+
+					</script><!-- Portfolio Script End -->
+
+				</div>
+
+			</div>
+
+
+		</section><!-- #content end -->
+		
+	
+		
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container clearfix" style="color:#0b0a0c">
+
+					<div class="col_half">
+						Copyrights &copy; 2016 All Rights Reserved by sfdev.tech<br>
+						<div class="copyright-links"><a href="term.html">Terms of Use</a> / <a href="pri.html">Privacy Policy</a></div>
+					</div>
+
+					<div class="col_half col_last tright">
+						<div class="fright clearfix">
+							
+
+							
+						
+						</div>
+
+						<div class="clear"></div>
+
+						
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700,800,900|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="css/rs-plugin/settings.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/rs-plugin/layers.css">
+	<link rel="stylesheet" type="text/css" href="css/rs-plugin/navigation.css">
+
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+	<script type="text/javascript" src="js/rs-plugin/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="js/rs-plugin/jquery.themepunch.revolution.min.js"></script>
+
+	<!-- Document Title
+	============================================= -->
+	<title>sfdev.tech</title>
+
+	<style>
+
+		.demos-filter {
+			margin: 0;
+			text-align: right;
+		}
+
+		.demos-filter li {
+			list-style: none;
+			margin: 10px 0px;
+		}
+
+		.demos-filter li a {
+			display: block;
+			border: 0;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #444;
+		}
+
+		.demos-filter li a:hover,
+		.demos-filter li.activeFilter a { color: #1ABC9C; }
+
+		@media (max-width: 991px) {
+			.demos-filter { text-align: center; }
+
+			.demos-filter li {
+				float: left;
+				width: 33.3%;
+				padding: 0 20px;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.demos-filter li { width: 50%; }
+		}
+
+		.revo-slider-emphasis-text {
+			font-size: 64px;
+			font-weight: 700;
+			letter-spacing: -1px;
+			font-family: 'Raleway', sans-serif;
+			padding: 15px 20px;
+			border-top: 2px solid #FFF;
+			border-bottom: 2px solid #FFF;
+		}
+
+		.revo-slider-desc-text {
+			font-size: 20px;
+			font-family: 'Lato', sans-serif;
+			width: 650px;
+			text-align: center;
+			line-height: 1.5;
+		}
+
+		.revo-slider-caps-text {
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 3px;
+			font-family: 'Raleway', sans-serif;
+		}
+		.tp-video-play-button { display: none !important; }
+
+		.tp-caption { white-space: nowrap; }
+
+	</style>
+
+</head>
+
+
+
+<body class="stretched side-panel-left side-push-panel">
+
+	<div class="body-overlay"></div>
+
+	<div id="side-panel" class="dark">
+
+		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon-line-cross"></i></a></div>
+
+		<div class="side-panel-wrap">
+
+			<div class="widget clearfix">
+
+				
+				
+
+			</div>
+
+			<div class="widget quick-contact-widget clearfix">
+
+				<h4 style="color:#0b0a0c">Quick Contact</h4>
+				<div id="quick-contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+				<form id="quick-contact-form" name="quick-contact-form" action="include/quickcontact.php" method="post" class="quick-contact-form nobottommargin">
+					<div class="form-process"></div>
+					<input type="text" class="required sm-form-control input-block-level" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Full Name" />
+					<input type="text" class="required sm-form-control email input-block-level" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Email Address" />
+					<textarea class="required sm-form-control input-block-level short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Message"></textarea>
+					<input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
+					<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d nomargin" value="submit">Send Email</button>
+				</form>
+
+				<script type="text/javascript">
+
+					jQuery("#quick-contact-form").validate({
+						submitHandler: function(form) {
+							jQuery(form).find('.form-process').fadeIn();
+							jQuery(form).ajaxSubmit({
+								target: '#quick-contact-form-result',
+								success: function() {
+									jQuery(form).find('.form-process').fadeOut();
+									jQuery(form).find('.sm-form-control').val('');
+									jQuery('#quick-contact-form-result').attr('data-notify-msg', jQuery('#quick-contact-form-result').html()).html('');
+									SEMICOLON.widget.notifications(jQuery('#quick-contact-form-result'));
+								}
+							});
+						}
+					});
+
+				</script>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+	<!-- Header
+		============================================= -->
+		<header id="header" class="full-header" data-sticky-class="not-dark">
+			
+			
+			<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.video.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="js/rs-plugin/extensions/revolution.extension.parallax.min.js"></script>
+
+			<div id="header-wrap">
+
+				<div class="container clearfix">
+
+				
+
+					<!-- Logo
+					============================================= -->
+					<div id="logo">
+						<a href="#" class="standard-logo side-panel-trigger" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+						<a href="#" class="retina-logo side-panel-trigger" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+					</div><!-- #logo end -->
+
+					
+		</header><!-- #header end -->
+		
+		<div>
+		
+<nav class="menuk">
+  <input type="checkbox" href="#" class="menuk-open" name="menuk-open" id="menuk-open" />
+  <label class="menuk-open-button" for="menuk-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+
+<a href="community.html" class="menuk-item"> <i class="icon-line2-home" style="font-size:40px;color:#FFC800"></i></a>
+  <a href="services.html" class="menuk-item"> <i class="icon-line2-wrench" style="font-size:40px;color:#f00"></i> </a>
+ <a href="about.html" class="menuk-item"> <i class="icon-line2-info" style="font-size:40px;color:#FFC800"></i> </a>s
+
+
+ 
+  <a class="menuk-itemk"><img src="images/blackglass.png"></a>
+ 
+ 	
+	 
+
+</nav>
+
+
+<div  class="button_container " id="toggle" style="font-size:50px;">
+	<img src="images/icons/avatar.png" >
+  </div>
+
+
+<div class="overlay" id="overlay">
+	
+    <div class="cont">
+  <div class="demo">
+    <div class="login">
+      <div class="login__check"></div>
+      <div class="login__form">
+        <div class="login__row">
+          <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+            <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+          </svg>
+          <input type="text" class="login__input name" placeholder="Username" />
+        </div>
+        <div class="login__row">
+          <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+            <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+          </svg>
+          <input type="password" class="login__input pass" placeholder="Password" />
+        </div>
+        <button type="button" class="login__submit">Sign in</button>
+        <p class="login__signup">Don't have an account? &nbsp;<a>Sign up</a></p>
+      </div>
+    </div>
+    <div class="app">
+      <div class="app__top">
+        
+        
+      </div>
+      <div class="app__bot">
+        
+      
+      </div>
+      <div class="app__logout">
+        <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
+          <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+		<!-- Slider
+		============================================= -->
+
+		<section id="slider" class="revoslider-wrap clearfix">
+
+			<div id="rev_slider_106_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="content-zoom78" style="margin:0px auto;background-color:#eef0f1;padding:0px;margin-top:0px;margin-bottom:0px;">
+					<!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
+					<div id="rev_slider_106_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+						<ul>	<!-- SLIDE  -->
+							<li data-index="rs-315" data-transition="fade" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="500"  data-rotate="0"  data-saveperformance="off"  data-title="Workspace" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/testback.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+
+								<!-- LAYER NR. 1 -->
+								<div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
+									 id="slide-315-layer-1"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-160','-160','-50']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:200px;opacity:0;s:1000;e:Power3.easeInOut;"
+									 data-transform_out="y:200px;rZ:0deg;sX:0.7;sY:0.7;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									data-start="750"
+									data-responsive_offset="on"
+
+
+									style="z-index: 5;"><img src="images/servicesima/brand/logo-01.png" alt="" width="1000" height="600" data-ww="['300px','300px','200px','200px']" data-hh="['300px','300px','200px','200px']" data-no-retina>
+								</div>
+
+								
+
+								<!-- LAYER NR. 3 -->
+								<div class="tp-caption ContentZoom-SmallTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-315-layer-7"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-10','90']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1000;e:Power3.easeInOut;"
+									 data-transform_out="y:[100%];rZ:0deg;sX:0.7;sY:0.7;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									 data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+									data-start="1100"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+
+									style="z-index: 7; white-space: nowrap;color:white;">Logo
+								</div>
+
+								<!-- LAYER NR. 5 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-315-layer-13"
+									 data-x="['center','center','center','center']" data-hoffset="['-300','-300','-250','-160']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-224','-160','5']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":""}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 9; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500; color:white;"><i class="icon-circle-arrow-down"></i>
+								</div>
+
+<!-- LAYER NR. 5 -->
+								
+
+								<!-- LAYER NR. 6 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-315-layer-10"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['200','214','225','260']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"startlayer","layer":"slide-315-layer-14","delay":""},{"event":"click","action":"startlayer","layer":"slide-315-layer-15","delay":""},{"event":"click","action":"startlayer","layer":"slide-315-layer-16","delay":"100"},{"event":"click","action":"startlayer","layer":"slide-315-layer-17","delay":"200"},{"event":"click","action":"startlayer","layer":"slide-315-layer-19","delay":"300"},{"event":"click","action":"startlayer","layer":"slide-315-layer-26","delay":"400"},{"event":"click","action":"startlayer","layer":"slide-315-layer-27","delay":"500"}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 10; white-space: nowrap;letter-spacing:2px;font-weight:500;color:#00FF00;font-size: 150px;"><i class="icon-line-circle-check"></i>
+								</div>
+
+								<!-- LAYER NR. 7 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-315-layer-12"
+									data-x="['center','center','center','center']" data-hoffset="['300','300','250','-160']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-224','-160','-115']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 11; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500;color:white;"><i class="icon-circle-arrow-up"></i>
+								</div>
+
+								<!-- LAYER NR. 8 -->
+								<div class="tp-caption tp-shape tp-shapewrapper tp-shape tp-shapewrapper  rs-parallaxlevel-0"
+									 id="slide-315-layer-14"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+												data-width="full"
+									data-height="full"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:700;e:Power3.easeInOut;"
+									 data-transform_out="x:[100%];s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+									 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+									data-start="bytrigger"
+									data-basealign="slide"
+									data-responsive_offset="off"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 12;background-color:rgba(245, 247, 249, 1.00);border-color:rgba(0, 0, 0, 0);">
+								</div>
+
+								<!-- LAYER NR. 9 -->
+								<div class="tp-caption   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-315-layer-15"
+									 data-x="['left','left','center','center']" data-hoffset="['-261','-50','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','263','-200']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:2000;e:Power3.easeInOut;"
+									 data-transform_out="x:left;s:700;e:Power3.easeInOut;s:700;e:Power3.easeInOut;"
+									data-start="bytrigger"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 13;"><img src="images/servicesima/brand/full1-01.png" alt="" width="900" height="600" data-ww="['900px','600px','800px','480px']" data-hh="['600px','400px','533','320px']" data-no-retina>
+								</div>
+
+								<!-- LAYER NR. 10 -->
+								<div class="tp-caption ContentZoom-DetailTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-315-layer-16"
+									 data-x="['left','left','center','center']" data-hoffset="['699','598','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['189','225','125','405']"
+												data-fontsize="['70','50','50','30']"
+									data-lineheight="['70','50','50','30']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 14; white-space: nowrap;">Logos
+								</div>
+
+								<!-- LAYER NR. 11 -->
+								<div class="tp-caption ContentZoom-DetailSubTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-315-layer-17"
+									 data-x="['left','left','center','center']" data-hoffset="['702','600','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['271','281','181','442']"
+												data-fontsize="['25','20','20','15']"
+									data-lineheight="['25','20','20','15']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 15; white-space: nowrap;">Unique Logo Design
+								</div>
+
+								<!-- LAYER NR. 12 -->
+								<div class="tp-caption ContentZoom-DetailContent   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-315-layer-19"
+									 data-x="['left','left','center','center']" data-hoffset="['702','600','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['341','339','229','486']"
+												data-fontsize="['17','15','15','13']"
+									data-lineheight="['28','24','24','22']"
+									data-width="['585','472','480','360']"
+									data-height="['none','129','129','129']"
+									data-whitespace="normal"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 16; min-width: 585px; max-width: 585px; white-space: normal;">It starts with branding and with careful thought a centralized logo. Since trademarking a logo is so essential it is important to finalize a logo before starting legal paperwork. 
+								</div>
+
+								<!-- LAYER NR. 13 -->
+								<div class="tp-caption ContentZoom-Button rev-btn  rs-parallaxlevel-0"
+									 id="slide-315-layer-26"
+									 data-x="['left','left','center','center']" data-hoffset="['703','602','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['513','492','382','741']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(41, 46, 49, 1.00);bc:rgba(41, 46, 49, 1.00);cursor:pointer;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 17; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><a href="#">Contact</a>
+								</div>
+
+								<!-- LAYER NR. 14 -->
+								<div class="tp-caption ContentZoom-ButtonClose rev-btn  rs-parallaxlevel-0"
+									 id="slide-315-layer-27"
+									 data-x="['right','right','right','right']" data-hoffset="['40','40','40','40']"
+									 data-y="['top','top','top','top']" data-voffset="['40','40','40','300']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(41, 46, 49, 1.00);bc:rgba(41, 46, 49, 1.00);cursor:pointer;"
+
+									 data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+									 data-transform_out="opacity:0;s:700;s:700;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"stoplayer","layer":"slide-315-layer-26","delay":""},{"event":"click","action":"stoplayer","layer":"slide-315-layer-19","delay":"50"},{"event":"click","action":"stoplayer","layer":"slide-315-layer-17","delay":"100"},{"event":"click","action":"stoplayer","layer":"slide-315-layer-16","delay":"150"},{"event":"click","action":"stoplayer","layer":"slide-315-layer-15","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-315-layer-27","delay":"250"},{"event":"click","action":"stoplayer","layer":"slide-315-layer-14","delay":"300"}]'
+									data-basealign="slide"
+									data-responsive_offset="off"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 18; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><i class="icon-remove"></i>
+								</div>
+							</li>
+							
+							<!-- SLIDE  -->
+							<li data-index="rs-316" data-transition="fade" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="500"  data-rotate="0"  data-saveperformance="off"  data-title="Workspace" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/testback.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+
+								<!-- LAYER NR. 1 -->
+								<div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
+									 id="slide-316-layer-1"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-160','-160','-50']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:200px;opacity:0;s:1000;e:Power3.easeInOut;"
+									 data-transform_out="y:200px;rZ:0deg;sX:0.7;sY:0.7;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									data-start="750"
+									data-responsive_offset="on"
+
+
+									style="z-index: 5;"><img src="images/servicesima/brand/card-01.png" alt="" width="1000" height="600" data-ww="['300px','300px','200px','200px']" data-hh="['300px','300px','200px','200px']" data-no-retina>
+								</div>
+
+								
+
+								<!-- LAYER NR. 3 -->
+								<div class="tp-caption ContentZoom-SmallTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-316-layer-7"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-10','90']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1000;e:Power3.easeInOut;"
+									 data-transform_out="y:[100%];rZ:0deg;sX:0.7;sY:0.7;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									 data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+									data-start="1100"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+
+									style="z-index: 7; white-space: nowrap;color:white;">Business Cards
+								</div>
+
+								<!-- LAYER NR. 5 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-316-layer-13"
+									 data-x="['center','center','center','center']" data-hoffset="['-300','-300','-250','-160']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-224','-160','5']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":""}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 9; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500; color:white;"><i class="icon-circle-arrow-down"></i>
+								</div>
+
+<!-- LAYER NR. 5 -->
+								
+
+								<!-- LAYER NR. 6 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-316-layer-10"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['200','214','225','260']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"startlayer","layer":"slide-316-layer-14","delay":""},{"event":"click","action":"startlayer","layer":"slide-316-layer-15","delay":""},{"event":"click","action":"startlayer","layer":"slide-316-layer-16","delay":"100"},{"event":"click","action":"startlayer","layer":"slide-316-layer-17","delay":"200"},{"event":"click","action":"startlayer","layer":"slide-316-layer-19","delay":"300"},{"event":"click","action":"startlayer","layer":"slide-316-layer-26","delay":"400"},{"event":"click","action":"startlayer","layer":"slide-316-layer-27","delay":"500"}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 10; white-space: nowrap;letter-spacing:2px;font-weight:500;color:#00FF00;font-size: 150px;"><i class="icon-line-circle-check"></i>
+								</div>
+
+								<!-- LAYER NR. 7 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-316-layer-12"
+									data-x="['center','center','center','center']" data-hoffset="['300','300','250','-160']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-224','-160','-115']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 11; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500;color:white;"><i class="icon-circle-arrow-up"></i>
+								</div>
+								<!-- LAYER NR. 8 -->
+								<div class="tp-caption tp-shape tp-shapewrapper tp-shape tp-shapewrapper  rs-parallaxlevel-0"
+									 id="slide-316-layer-14"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+												data-width="full"
+									data-height="full"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:700;e:Power3.easeInOut;"
+									 data-transform_out="x:[100%];s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+									 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+									data-start="bytrigger"
+									data-basealign="slide"
+									data-responsive_offset="off"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 12;background-color:rgba(245, 247, 249, 1.00);border-color:rgba(0, 0, 0, 0);">
+								</div>
+
+								<!-- LAYER NR. 9 -->
+								<div class="tp-caption   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-316-layer-15"
+									 data-x="['left','left','center','center']" data-hoffset="['-261','-50','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','263','-200']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:2000;e:Power3.easeInOut;"
+									 data-transform_out="x:left;s:700;e:Power3.easeInOut;s:700;e:Power3.easeInOut;"
+									data-start="bytrigger"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 13;"><img src="images/servicesima/brand/full2-01.png" alt="" width="900" height="600" data-ww="['900px','600px','800px','480px']" data-hh="['600px','400px','533','320px']" data-no-retina>
+								</div>
+
+								<!-- LAYER NR. 10 -->
+								<div class="tp-caption ContentZoom-DetailTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-316-layer-16"
+									 data-x="['left','left','center','center']" data-hoffset="['699','598','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['189','225','125','405']"
+												data-fontsize="['70','50','50','30']"
+									data-lineheight="['70','50','50','30']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 14; white-space: nowrap;">Business Cards
+								</div>
+
+								<!-- LAYER NR. 11 -->
+								<div class="tp-caption ContentZoom-DetailSubTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-316-layer-17"
+									 data-x="['left','left','center','center']" data-hoffset="['702','600','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['271','281','181','442']"
+												data-fontsize="['25','20','20','15']"
+									data-lineheight="['25','20','20','15']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 15; white-space: nowrap;">Let's get serious
+								</div>
+
+								<!-- LAYER NR. 12 -->
+								<div class="tp-caption ContentZoom-DetailContent   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-316-layer-19"
+									 data-x="['left','left','center','center']" data-hoffset="['702','600','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['341','339','229','486']"
+												data-fontsize="['17','15','15','13']"
+									data-lineheight="['28','24','24','22']"
+									data-width="['585','472','480','360']"
+									data-height="['none','129','129','129']"
+									data-whitespace="normal"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 16; min-width: 585px; max-width: 585px; white-space: normal;">The beginnings of a business starts with letting people know you are in business. A bold simple business card will go miles and is a simple way to take your business to the next level.
+								</div>
+
+								<!-- LAYER NR. 13 -->
+								<div class="tp-caption ContentZoom-Button rev-btn  rs-parallaxlevel-0"
+									 id="slide-316-layer-26"
+									 data-x="['left','left','center','center']" data-hoffset="['703','602','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['513','492','382','741']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(41, 46, 49, 1.00);bc:rgba(41, 46, 49, 1.00);cursor:pointer;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 17; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><a href="#">Contact</a>
+								</div>
+
+								<!-- LAYER NR. 14 -->
+								<div class="tp-caption ContentZoom-ButtonClose rev-btn  rs-parallaxlevel-0"
+									 id="slide-316-layer-27"
+									 data-x="['right','right','right','right']" data-hoffset="['40','40','40','40']"
+									 data-y="['top','top','top','top']" data-voffset="['40','40','40','300']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(41, 46, 49, 1.00);bc:rgba(41, 46, 49, 1.00);cursor:pointer;"
+
+									 data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+									 data-transform_out="opacity:0;s:700;s:700;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"stoplayer","layer":"slide-316-layer-26","delay":""},{"event":"click","action":"stoplayer","layer":"slide-316-layer-19","delay":"50"},{"event":"click","action":"stoplayer","layer":"slide-316-layer-17","delay":"100"},{"event":"click","action":"stoplayer","layer":"slide-316-layer-16","delay":"150"},{"event":"click","action":"stoplayer","layer":"slide-316-layer-15","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-316-layer-27","delay":"250"},{"event":"click","action":"stoplayer","layer":"slide-316-layer-14","delay":"300"}]'
+									data-basealign="slide"
+									data-responsive_offset="off"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 18; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><i class="icon-remove"></i>
+								</div>
+							</li>
+							
+							<!-- SLIDE  -->
+							<li data-index="rs-317" data-transition="fade" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="500"  data-rotate="0"  data-saveperformance="off"  data-title="Workspace" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/testback.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+
+								<!-- LAYER NR. 1 -->
+								<div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
+									 id="slide-317-layer-1"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-160','-160','-50']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:200px;opacity:0;s:1000;e:Power3.easeInOut;"
+									 data-transform_out="y:200px;rZ:0deg;sX:0.7;sY:0.7;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									data-start="750"
+									data-responsive_offset="on"
+
+
+									style="z-index: 5;"><img src="images/servicesima/brand/admaterial-01.png" alt="" width="1000" height="600" data-ww="['300px','300px','200px','200px']" data-hh="['300px','300px','200px','200px']" data-no-retina>
+								</div>
+
+								
+
+								<!-- LAYER NR. 3 -->
+								<div class="tp-caption ContentZoom-SmallTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-317-layer-7"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-10','90']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1000;e:Power3.easeInOut;"
+									 data-transform_out="y:[100%];rZ:0deg;sX:0.7;sY:0.7;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									 data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+									data-start="1100"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+
+									style="z-index: 7; white-space: nowrap;color:white;">Ad Material
+								</div>
+
+								<!-- LAYER NR. 5 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-317-layer-13"
+									 data-x="['center','center','center','center']" data-hoffset="['-300','-300','-250','-160']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-224','-160','5']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":""}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 9; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500; color:white;"><i class="icon-circle-arrow-down"></i>
+								</div>
+
+<!-- LAYER NR. 5 -->
+								
+
+								<!-- LAYER NR. 6 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-317-layer-10"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['200','214','225','260']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"startlayer","layer":"slide-317-layer-14","delay":""},{"event":"click","action":"startlayer","layer":"slide-317-layer-15","delay":""},{"event":"click","action":"startlayer","layer":"slide-317-layer-16","delay":"100"},{"event":"click","action":"startlayer","layer":"slide-317-layer-17","delay":"200"},{"event":"click","action":"startlayer","layer":"slide-317-layer-19","delay":"300"},{"event":"click","action":"startlayer","layer":"slide-317-layer-26","delay":"400"},{"event":"click","action":"startlayer","layer":"slide-317-layer-27","delay":"500"}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 10; white-space: nowrap;letter-spacing:2px;font-weight:500;color:#00FF00;font-size: 150px;"><i class="icon-line-circle-check"></i>
+								</div>
+
+								<!-- LAYER NR. 7 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-317-layer-12"
+									data-x="['center','center','center','center']" data-hoffset="['300','300','250','-160']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-224','-160','-115']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 11; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500;color:white;"><i class="icon-circle-arrow-up"></i>
+								</div>
+
+								<!-- LAYER NR. 8 -->
+								<div class="tp-caption tp-shape tp-shapewrapper tp-shape tp-shapewrapper  rs-parallaxlevel-0"
+									 id="slide-317-layer-14"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+												data-width="full"
+									data-height="full"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:700;e:Power3.easeInOut;"
+									 data-transform_out="x:[100%];s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+									 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+									data-start="bytrigger"
+									data-basealign="slide"
+									data-responsive_offset="off"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 12;background-color:rgba(245, 247, 249, 1.00);border-color:rgba(0, 0, 0, 0);">
+								</div>
+
+								<!-- LAYER NR. 9 -->
+								<div class="tp-caption   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-317-layer-15"
+									 data-x="['left','left','center','center']" data-hoffset="['-261','-50','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','263','-200']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:2000;e:Power3.easeInOut;"
+									 data-transform_out="x:left;s:700;e:Power3.easeInOut;s:700;e:Power3.easeInOut;"
+									data-start="bytrigger"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 13;"><img src="images/servicesima/brand/full3-01.png" alt="" width="900" height="600" data-ww="['900px','600px','800px','480px']" data-hh="['600px','400px','533','320px']" data-no-retina>
+								</div>
+
+								<!-- LAYER NR. 10 -->
+								<div class="tp-caption ContentZoom-DetailTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-317-layer-16"
+									 data-x="['left','left','center','center']" data-hoffset="['699','598','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['189','225','125','405']"
+												data-fontsize="['70','50','50','30']"
+									data-lineheight="['70','50','50','30']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 14; white-space: nowrap;">Ad Material
+								</div>
+
+								<!-- LAYER NR. 11 -->
+								<div class="tp-caption ContentZoom-DetailSubTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-317-layer-17"
+									 data-x="['left','left','center','center']" data-hoffset="['702','600','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['271','281','181','442']"
+												data-fontsize="['25','20','20','15']"
+									data-lineheight="['25','20','20','15']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 15; white-space: nowrap;">Let people know
+								</div>
+
+								<!-- LAYER NR. 12 -->
+								<div class="tp-caption ContentZoom-DetailContent   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-317-layer-19"
+									 data-x="['left','left','center','center']" data-hoffset="['702','600','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['341','339','229','486']"
+												data-fontsize="['17','15','15','13']"
+									data-lineheight="['28','24','24','22']"
+									data-width="['585','472','480','360']"
+									data-height="['none','129','129','129']"
+									data-whitespace="normal"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 16; min-width: 585px; max-width: 585px; white-space: normal;">From the simple A4 poster to a billboard to menus, the design of advertising material is simple, eye-catching and bold. The main idea is to relay as much information as possible. 
+								</div>
+
+								<!-- LAYER NR. 13 -->
+								<div class="tp-caption ContentZoom-Button rev-btn  rs-parallaxlevel-0"
+									 id="slide-317-layer-26"
+									 data-x="['left','left','center','center']" data-hoffset="['703','602','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['513','492','382','741']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(41, 46, 49, 1.00);bc:rgba(41, 46, 49, 1.00);cursor:pointer;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 17; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><a href="#">Contact</a>
+								</div>
+
+								<!-- LAYER NR. 14 -->
+								<div class="tp-caption ContentZoom-ButtonClose rev-btn  rs-parallaxlevel-0"
+									 id="slide-317-layer-27"
+									 data-x="['right','right','right','right']" data-hoffset="['40','40','40','40']"
+									 data-y="['top','top','top','top']" data-voffset="['40','40','40','300']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(41, 46, 49, 1.00);bc:rgba(41, 46, 49, 1.00);cursor:pointer;"
+
+									 data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+									 data-transform_out="opacity:0;s:700;s:700;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"stoplayer","layer":"slide-317-layer-26","delay":""},{"event":"click","action":"stoplayer","layer":"slide-317-layer-19","delay":"50"},{"event":"click","action":"stoplayer","layer":"slide-317-layer-17","delay":"100"},{"event":"click","action":"stoplayer","layer":"slide-317-layer-16","delay":"150"},{"event":"click","action":"stoplayer","layer":"slide-317-layer-15","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-317-layer-27","delay":"250"},{"event":"click","action":"stoplayer","layer":"slide-317-layer-14","delay":"300"}]'
+									data-basealign="slide"
+									data-responsive_offset="off"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 18; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><i class="icon-remove"></i>
+								</div>
+							</li>
+							
+							<!-- SLIDE  -->
+							<li data-index="rs-318" data-transition="fade" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="500"  data-rotate="0"  data-saveperformance="off"  data-title="Workspace" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="images/testback.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+
+								<!-- LAYER NR. 1 -->
+								<div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
+									 id="slide-318-layer-1"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-160','-160','-50']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:200px;opacity:0;s:1000;e:Power3.easeInOut;"
+									 data-transform_out="y:200px;rZ:0deg;sX:0.7;sY:0.7;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									data-start="750"
+									data-responsive_offset="on"
+
+
+									style="z-index: 5;"><img src="images/servicesima/brand/identy-01.png" alt="" width="1000" height="600" data-ww="['300px','300px','200px','200px']" data-hh="['300px','300px','200px','200px']" data-no-retina>
+								</div>
+
+								
+
+								<!-- LAYER NR. 3 -->
+								<div class="tp-caption ContentZoom-SmallTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-318-layer-7"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-10','90']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1000;e:Power3.easeInOut;"
+									 data-transform_out="y:[100%];rZ:0deg;sX:0.7;sY:0.7;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									 data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+									data-start="1100"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+
+									style="z-index: 7; white-space: nowrap;color:white;">Brand Identy
+								</div>
+
+								<!-- LAYER NR. 5 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-318-layer-13"
+									 data-x="['center','center','center','center']" data-hoffset="['-300','-300','-250','-160']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-224','-160','5']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":""}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 9; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500; color:white;"><i class="icon-circle-arrow-down"></i>
+								</div>
+
+<!-- LAYER NR. 5 -->
+								
+
+								<!-- LAYER NR. 6 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-318-layer-10"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['200','214','225','260']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"startlayer","layer":"slide-318-layer-14","delay":""},{"event":"click","action":"startlayer","layer":"slide-318-layer-15","delay":""},{"event":"click","action":"startlayer","layer":"slide-318-layer-16","delay":"100"},{"event":"click","action":"startlayer","layer":"slide-318-layer-17","delay":"200"},{"event":"click","action":"startlayer","layer":"slide-318-layer-19","delay":"300"},{"event":"click","action":"startlayer","layer":"slide-318-layer-26","delay":"400"},{"event":"click","action":"startlayer","layer":"slide-318-layer-27","delay":"500"}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 10; white-space: nowrap;letter-spacing:2px;font-weight:500;color:#00FF00;font-size: 150px;"><i class="icon-line-circle-check"></i>
+								</div>
+
+								<!-- LAYER NR. 7 -->
+								<div class="tp-caption ContentZoom-SmallIcon   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-318-layer-12"
+									data-x="['center','center','center','center']" data-hoffset="['300','300','250','-160']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-200','-224','-160','-115']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;"
+
+									 data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
+									 data-transform_out="opacity:0;s:500;e:Power1.easeInOut;s:500;e:Power1.easeInOut;"
+									data-start="0"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+									data-responsive_offset="on"
+
+
+									style="z-index: 11; white-space: nowrap; font-size: 75px; line-height: 30px;letter-spacing:2px;font-weight:500;color:white;"><i class="icon-circle-arrow-up"></i>
+								</div>
+
+								<!-- LAYER NR. 8 -->
+								<div class="tp-caption tp-shape tp-shapewrapper tp-shape tp-shapewrapper  rs-parallaxlevel-0"
+									 id="slide-318-layer-14"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+												data-width="full"
+									data-height="full"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:700;e:Power3.easeInOut;"
+									 data-transform_out="x:[100%];s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+									 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+									 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+									data-start="bytrigger"
+									data-basealign="slide"
+									data-responsive_offset="off"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 12;background-color:rgba(245, 247, 249, 1.00);border-color:rgba(0, 0, 0, 0);">
+								</div>
+
+								<!-- LAYER NR. 9 -->
+								<div class="tp-caption   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-318-layer-15"
+									 data-x="['left','left','center','center']" data-hoffset="['-261','-50','0','0']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','263','-200']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:2000;e:Power3.easeInOut;"
+									 data-transform_out="x:left;s:700;e:Power3.easeInOut;s:700;e:Power3.easeInOut;"
+									data-start="bytrigger"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 13;"><img src="images/servicesima/brand/full4-01.png" alt="" width="900" height="600" data-ww="['900px','600px','800px','480px']" data-hh="['600px','400px','533','320px']" data-no-retina>
+								</div>
+
+								<!-- LAYER NR. 10 -->
+								<div class="tp-caption ContentZoom-DetailTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-318-layer-16"
+									 data-x="['left','left','center','center']" data-hoffset="['699','598','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['189','225','125','405']"
+												data-fontsize="['70','50','50','30']"
+									data-lineheight="['70','50','50','30']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 14; white-space: nowrap;">Brand Identy
+								</div>
+
+								<!-- LAYER NR. 11 -->
+								<div class="tp-caption ContentZoom-DetailSubTitle   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-318-layer-17"
+									 data-x="['left','left','center','center']" data-hoffset="['702','600','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['271','281','181','442']"
+												data-fontsize="['25','20','20','15']"
+									data-lineheight="['25','20','20','15']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 15; white-space: nowrap;">Whats your brand about?
+								</div>
+
+								<!-- LAYER NR. 12 -->
+								<div class="tp-caption ContentZoom-DetailContent   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-318-layer-19"
+									 data-x="['left','left','center','center']" data-hoffset="['702','600','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['341','339','229','486']"
+												data-fontsize="['17','15','15','13']"
+									data-lineheight="['28','24','24','22']"
+									data-width="['585','472','480','360']"
+									data-height="['none','129','129','129']"
+									data-whitespace="normal"
+									data-transform_idle="o:1;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 16; min-width: 585px; max-width: 585px; white-space: normal;">If the identity of a brand need development in regards to it literal definition we can provide assistance. Seo services are also offered.
+								</div>
+
+								<!-- LAYER NR. 13 -->
+								<div class="tp-caption ContentZoom-Button rev-btn  rs-parallaxlevel-0"
+									 id="slide-318-layer-26"
+									 data-x="['left','left','center','center']" data-hoffset="['703','602','0','0']"
+									 data-y="['top','top','top','top']" data-voffset="['513','492','382','741']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(41, 46, 49, 1.00);bc:rgba(41, 46, 49, 1.00);cursor:pointer;"
+
+									 data-transform_in="y:50px;opacity:0;s:1500;e:Power2.easeInOut;"
+									 data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeIn;s:500;e:Power2.easeIn;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 17; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><a href="#">Contact</a>
+								</div>
+
+								<!-- LAYER NR. 14 -->
+								<div class="tp-caption ContentZoom-ButtonClose rev-btn  rs-parallaxlevel-0"
+									 id="slide-318-layer-27"
+									 data-x="['right','right','right','right']" data-hoffset="['40','40','40','40']"
+									 data-y="['top','top','top','top']" data-voffset="['40','40','40','300']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+										data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(41, 46, 49, 1.00);bc:rgba(41, 46, 49, 1.00);cursor:pointer;"
+
+									 data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+									 data-transform_out="opacity:0;s:700;s:700;"
+									data-start="bytrigger"
+									data-splitin="none"
+									data-splitout="none"
+									data-actions='[{"event":"click","action":"stoplayer","layer":"slide-315-layer-26","delay":""},{"event":"click","action":"stoplayer","layer":"slide-318-layer-19","delay":"50"},{"event":"click","action":"stoplayer","layer":"slide-318-layer-17","delay":"100"},{"event":"click","action":"stoplayer","layer":"slide-318-layer-16","delay":"150"},{"event":"click","action":"stoplayer","layer":"slide-318-layer-15","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-318-layer-27","delay":"250"},{"event":"click","action":"stoplayer","layer":"slide-318-layer-14","delay":"300"}]'
+									data-basealign="slide"
+									data-responsive_offset="off"
+									data-responsive="off"
+									 data-end="bytrigger"
+									data-lasttriggerstate="reset"
+									style="z-index: 18; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><i class="icon-remove"></i>
+								</div>
+							</li>
+							
+							
+							<!-- LAYER NR. 1 -->
+							<div class="tp-caption -   rs-parallaxlevel-0 tp-static-layer"
+								 id="slide-61-layer-1"
+								 data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']"
+								 data-y="['top','top','top','top']" data-voffset="['30','30','30','30']"
+											data-width="none"
+								data-height="none"
+								data-whitespace="nowrap"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="opacity:0;s:1000;e:Power3.easeInOut;"
+								 data-transform_out="auto:auto;s:1000;"
+								data-start="500"
+								data-splitin="none"
+								data-splitout="none"
+								data-actions='[{"event":"click","action":"toggleclass","layer":"slide-61-layer-1","delay":"0","classname":"open"},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slide-61-layer-3","delay":"0"},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slide-61-layer-4","delay":"0"},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slide-61-layer-5","delay":"0"},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slide-61-layer-6","delay":"0"}]'
+								data-basealign="slide"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-startslide="0"
+								data-endslide="2"
+
+								style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);">
+								<div id="rev-burger">
+								  <span></span>
+								  <span></span>
+								  <span></span>
+								</div>
+							</div>
+						</div>
+						<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+					</div>
+				</div><!-- END REVOLUTION SLIDER -->
+				<script type="text/javascript">
+					var tpj=jQuery;
+					var revapi106;
+					tpj(document).ready(function() {
+						if(tpj("#rev_slider_106_1").revolution == undefined){
+							revslider_showDoubleJqueryError("#rev_slider_106_1");
+						}else{
+							revapi106 = tpj("#rev_slider_106_1").show().revolution({
+								sliderType:"standard",
+								jsFileLocation:"js/rs-plugin/",
+								sliderLayout:"fullwidth",
+								dottedOverlay:"none",
+								delay:9000,
+								navigation: {
+									keyboardNavigation:"off",
+									keyboard_direction: "vertical",
+									mouseScrollNavigation:"off",
+									onHoverStop:"off",
+									touch:{
+										touchenabled:"on",
+										swipe_threshold: 75,
+										swipe_min_touches: 50,
+										swipe_direction: "vertical",
+										drag_block_vertical: false
+									}
+								},
+								responsiveLevels:[1240,1024,778,480],
+								gridwidth:[1400,1240,778,480],
+								gridheight:[768,768,960,720],
+								lazyType:"none",
+								parallax: {
+									type:"mouse+scroll",
+									origo:"slidercenter",
+									speed:2000,
+									levels:[1,2,3,20,25,30,35,40,45,50],
+									disable_onmobile:"on"
+								},
+								shadow:0,
+								spinner:"off",
+								stopLoop:"on",
+								stopAfterLoops:0,
+								stopAtSlide:1,
+								shuffle:"off",
+								autoHeight:"off",
+								disableProgressBar:"on",
+								hideThumbsOnMobile:"off",
+								hideSliderAtLimit:0,
+								hideCaptionAtLimit:0,
+								hideAllCaptionAtLilmit:0,
+								debugMode:false,
+								fallbacks: {
+									simplifyAll:"off",
+									nextSlideOnWindowFocus:"off",
+									disableFocusListener:false,
+								}
+							});
+						}
+					});	/*ready*/
+				</script>
+
+			<!-- END REVOLUTION SLIDER -->
+
+		</section>
+
+		
+
+						
+					</div>
+
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+		
+		
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container clearfix" style="color:#0b0a0c">
+
+					<div class="col_half">
+						Copyrights &copy; 2016 All Rights Reserved by sfdev.tech<br>
+						
+					</div>
+
+					<div class="col_half col_last tright">
+						<div class="fright clearfix">
+							
+
+							
+						
+						</div>
+
+						<div class="clear"></div>
+
+						
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+
+</body>
+</html>
